@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Product from "./Product";
+import ProductErrorBoundary from "./ProductErrorBoundary";
 
 const GridView = ({ products }) => {
-    console.log('products: ', products);
   return (
     <Wrapper className="section">
       <div className="container grid grid-three-column">
-        {products.map((curElem) => {
-          return <Product key={curElem.id} {...curElem} />;
-        })}
+        {products.map((curElem) => (
+          <ProductErrorBoundary key={curElem.id}>
+            <Product {...curElem} />
+          </ProductErrorBoundary>
+        ))}
       </div>
     </Wrapper>
   );
