@@ -19,7 +19,7 @@ const SingleProduct = () => {
   // console.log('id: ', id);
    const {id: sheela,image,name,company, description,category,stock,stars,reviews,price} = singleProduct;
   useEffect(()=>{
-  getSingleProduct(`${API}?id=${id}`)
+  getSingleProduct(`${API}?id=`)
   },[])
   if(isSingleLoading){
     return <div className="page_loading">Loading.....</div>
