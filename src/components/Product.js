@@ -30,7 +30,7 @@ Product.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired
+  category: PropTypes.string.isRequired,
 };
 
 export default Product
