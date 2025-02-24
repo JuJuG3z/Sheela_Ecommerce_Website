@@ -4,7 +4,6 @@ import FormatPrice from '../Helpers/FormatPrice';
 import PropTypes from 'prop-types';
 
 const Product = ({ id, name, image, price, category }) => {
-  // Fallback for missing product name
   const displayName = name || 'Untitled Product';
   
   return (
@@ -28,7 +27,6 @@ const Product = ({ id, name, image, price, category }) => {
   );
 };
 
-// Add prop validation
 Product.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -37,7 +35,6 @@ Product.propTypes = {
   category: PropTypes.string.isRequired
 };
 
-// Add default props
 Product.defaultProps = {
   name: 'Untitled Product',
   image: '',
