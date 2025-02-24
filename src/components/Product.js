@@ -7,13 +7,13 @@ const Product = (curElem) => {
     <NavLink to={`/singleproduct/${id}`}>
     <div className="card">
       <figure>
-        <img src={image} alt={name} />
+        <img src={null} alt={name} />
         <figcaption className="caption">{category}</figcaption>
       </figure>
 
       <div className="card-data">
         <div className="card-data-flex">
-          <h3>{name}</h3>
+          <h3>{nameProduct}</h3>
           <p className="card-data--price"><FormatPrice price={price}/></p>
         </div>
       </div>
